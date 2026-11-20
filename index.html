@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14211e">
+  <meta name="description" content="低压电工作业（初训）2025新大纲备考参考，含自编练习题、错题收藏、随机自测和公开题库来源。">
+  <title>低压上岸 · 低压电工初训题库参考</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #14211e;
+      --ink-soft: #41534e;
+      --muted: #687a73;
+      --paper: #f4f7f4;
+      --surface: #ffffff;
+      --line: #dfe7e1;
+      --green: #166a50;
+      --green-dark: #0f4f3b;
+      --lime: #d8f46a;
+      --lime-dark: #b4d845;
+      --amber: #f2b94b;
+      --red: #b84136;
+      --shadow: 0 20px 55px rgba(17, 42, 33, .09);
+      font-family: Inter, "SF Pro Display", "Segoe UI", "Microsoft YaHei", sans-serif;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-size: 16px; line-height: 1.6; }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    button { cursor: pointer; }
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .site-header { height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font-weight: 800; letter-spacing: -.03em; }
+    .brand-mark { width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; background: var(--lime); color: var(--ink); }
+    .brand-mark svg { width: 20px; height: 20px; }
+    .brand-name { font-size: 18px; line-height: 1; }
+    .brand-caption { display: block; color: var(--muted); font-size: 12px; font-weight: 600; letter-spacing: .02em; margin-top: 5px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { text-decoration: none; color: var(--ink-soft); font-size: 14px; font-weight: 700; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-cta, .button-primary { border: 0; border-radius: 12px; background: var(--lime); color: var(--ink); font-weight: 800; padding: 12px 17px; text-decoration: none; transition: transform .18s, background .18s; }
+    .nav-cta:hover, .button-primary:hover { transform: translateY(-2px); background: var(--lime-dark); }
+    .hero-wrap { background: var(--ink); color: white; position: relative; overflow: hidden; }
+    .hero-wrap:before { content: ""; position: absolute; width: 580px; height: 580px; right: -110px; top: -290px; border: 1px solid rgba(216, 244, 106, .17); border-radius: 50%; box-shadow: 0 0 0 45px rgba(216, 244, 106, .035), 0 0 0 100px rgba(216, 244, 106, .025); }
+    .hero { min-height: 416px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr); align-items: center; gap: 56px; padding: 58px 0 62px; position: relative; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--lime); text-transform: uppercase; font-size: 12px; font-weight: 800; letter-spacing: .12em; }
+    .eyebrow-dot { width: 7px; height: 7px; background: var(--lime); border-radius: 50%; }
+    h1 { margin: 17px 0 14px; max-width: 700px; font-size: clamp(38px, 5vw, 62px); letter-spacing: -.055em; line-height: 1.08; }
+    .hero h1 span { color: var(--lime); }
+    .hero-copy { margin: 0; max-width: 620px; color: #c0cec7; font-size: 17px; }
+    .hero-actions { display: flex; gap: 12px; align-items: center; margin-top: 27px; flex-wrap: wrap; }
+    .button-primary { display: inline-flex; justify-content: center; align-items: center; min-height: 48px; padding: 13px 20px; }
+    .button-ghost { color: white; border: 1px solid rgba(255,255,255,.28); border-radius: 12px; min-height: 48px; display: inline-flex; align-items: center; padding: 12px 18px; text-decoration: none; font-weight: 700; }
+    .button-ghost:hover { border-color: var(--lime); color: var(--lime); }
+    .hero-note { margin-top: 17px; color: #96a79f; font-size: 13px; }
+    .outline-card { background: #20332d; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; padding: 24px; box-shadow: 0 22px 55px rgba(0,0,0,.22); position: relative; }
+    .outline-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .outline-card h2 { margin: 0; font-size: 16px; letter-spacing: -.02em; }
+    .outline-card .caption { margin: 4px 0 0; color: #9aada4; font-size: 13px; }
+    .outline-tag { color: var(--lime); background: rgba(216,244,106,.1); border: 1px solid rgba(216,244,106,.27); border-radius: 99px; padding: 5px 9px; font-size: 12px; font-weight: 800; white-space: nowrap; }
+    .hours-total { display: flex; align-items: baseline; gap: 8px; margin: 26px 0 16px; }
+    .hours-total strong { font-size: 49px; line-height: 1; letter-spacing: -.07em; }
+    .hours-total span { color: #a5b6af; font-size: 14px; }
+    .hours-bar { height: 10px; display: flex; border-radius: 10px; overflow: hidden; background: #334940; }
+    .hours-theory { width: 40%; background: var(--amber); }
+    .hours-practice { width: 60%; background: var(--lime); }
+    .hours-legend { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+    .hours-legend div { display: flex; align-items: center; gap: 8px; color: #c5d1cb; font-size: 13px; }
+    .legend-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); }
+    .legend-dot.practice { background: var(--lime); }
+    .hero-rule { border-top: 1px solid rgba(255,255,255,.12); margin-top: 22px; padding-top: 16px; color: #a5b6af; font-size: 13px; }
+    .hero-rule strong { color: white; }
+    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 23px 0 28px; }
+    .stat-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 17px 19px; }
+    .stat-card strong { display: block; color: var(--green); font-size: 24px; line-height: 1.2; letter-spacing: -.04em; }
+    .stat-card span { display: block; color: var(--muted); font-size: 13px; margin-top: 4px; }
+    main { padding-bottom: 70px; }
+    .section { padding-top: 48px; scroll-margin-top: 24px; }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 20px; }
+    .section-kicker { display: block; margin-bottom: 8px; color: var(--green); font-size: 12px; text-transform: uppercase; letter-spacing: .12em; font-weight: 850; }
+    h2.section-title { font-size: clamp(26px, 3vw, 36px); line-height: 1.15; margin: 0; letter-spacing: -.045em; }
+    .section-intro { max-width: 565px; margin: 8px 0 0; color: var(--muted); }
+    .outline-grid { display: grid; grid-template-columns: 1.04fr .96fr; gap: 18px; }
+    .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: 0 4px 14px rgba(17,42,33,.025); }
+    .panel-pad { padding: 23px; }
+    .panel h3 { margin: 0 0 15px; font-size: 17px; letter-spacing: -.02em; }
+    .exam-parts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .exam-part { border-radius: 13px; padding: 16px; background: #f3f7f3; border: 1px solid #e3ebe4; }
+    .exam-part strong { display: block; font-size: 15px; }
+    .exam-part p { margin: 7px 0 0; color: var(--muted); font-size: 13px; }
+    .part-number { display: inline-grid; place-items: center; width: 27px; height: 27px; margin-bottom: 12px; border-radius: 9px; background: #e2eddf; color: var(--green-dark); font-size: 12px; font-weight: 850; }
+    .weight-bars { display: grid; gap: 13px; }
+    .weight-row { display: grid; grid-template-columns: 128px 1fr 44px; align-items: center; gap: 10px; font-size: 13px; }
+    .weight-row span:first-child { color: var(--ink-soft); }
+    .weight-row strong { text-align: right; font-size: 13px; }
+    .weight-track { height: 9px; border-radius: 9px; background: #edf1ed; overflow: hidden; }
+    .weight-fill { height: 100%; background: var(--green); border-radius: inherit; }
+    .weight-row:nth-child(3) .weight-fill { background: var(--lime-dark); }
+    .study-callout { margin-top: 16px; padding: 13px 14px; border-radius: 12px; color: #4b5b54; background: #f8f5e9; font-size: 13px; }
+    .study-callout strong { color: #6b4e0e; }
+    .practice-section { padding-top: 58px; }
+    .practice-layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 18px; align-items: start; }
+    .practice-main { overflow: hidden; }
+    .practice-top { padding: 20px 22px 16px; border-bottom: 1px solid var(--line); }
+    .practice-tools { display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+    .practice-tools h3 { margin: 0; font-size: 18px; }
+    .search-wrap { position: relative; width: min(280px, 100%); }
+    .search-wrap svg { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 16px; height: 16px; color: #7c8b84; }
+    .search-wrap input { width: 100%; border: 1px solid var(--line); border-radius: 10px; min-height: 42px; padding: 9px 12px 9px 36px; outline: none; color: var(--ink); background: #fbfcfb; }
+    .search-wrap input:focus { border-color: #7caf95; box-shadow: 0 0 0 3px rgba(22,106,80,.1); }
+    .filter-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+    .filter-chip { padding: 7px 11px; border-radius: 999px; border: 1px solid var(--line); background: white; color: var(--ink-soft); font-size: 13px; font-weight: 750; }
+    .filter-chip:hover { border-color: #a4c3b0; }
+    .filter-chip.active { background: var(--green); border-color: var(--green); color: white; }
+    .question-area { padding: 23px; }
+    .question-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 15px; }
+    .question-tags { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+    .question-count, .question-category, .question-type { display: inline-flex; align-items: center; border-radius: 99px; padding: 5px 9px; font-size: 12px; font-weight: 800; }
+    .question-count { background: #edf3ee; color: var(--green-dark); }
+    .question-category { background: #f7f2e4; color: #725313; }
+    .question-type { color: #6b7771; background: #f0f2f1; }
+    .icon-button { border: 1px solid var(--line); background: white; color: var(--muted); border-radius: 10px; min-height: 38px; padding: 7px 11px; display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 750; }
+    .icon-button:hover { border-color: var(--lime-dark); color: var(--green-dark); }
+    .icon-button.saved { background: #f3f9db; color: #48620e; border-color: #d4e8a0; }
+    .icon-button svg { width: 16px; height: 16px; }
+    .question-text { margin: 0 0 20px; font-size: clamp(19px, 2vw, 23px); line-height: 1.48; letter-spacing: -.02em; font-weight: 760; }
+    .options { display: grid; gap: 10px; }
+    .option-button { width: 100%; text-align: left; display: flex; align-items: flex-start; gap: 12px; padding: 13px 14px; min-height: 54px; border-radius: 12px; border: 1px solid var(--line); background: white; color: var(--ink); transition: border-color .16s, background .16s, transform .16s; }
+    .option-button:hover:not(:disabled) { border-color: #9abca8; background: #f8fbf8; transform: translateY(-1px); }
+    .option-letter { flex: 0 0 25px; height: 25px; display: grid; place-items: center; border-radius: 8px; background: #f1f4f1; color: #56665f; font-size: 12px; font-weight: 850; }
+    .option-copy { padding-top: 1px; font-size: 15px; font-weight: 600; }
+    .option-button.correct { border-color: #62ae86; background: #f1fbf4; }
+    .option-button.correct .option-letter { background: #178353; color: white; }
+    .option-button.incorrect { border-color: #dc978e; background: #fff5f3; }
+    .option-button.incorrect .option-letter { background: #b84136; color: white; }
+    .option-button:disabled { cursor: default; }
+    .feedback { margin-top: 14px; padding: 14px 15px; border-radius: 12px; background: #f1f7f1; border: 1px solid #dcebdd; }
+    .feedback.wrong { background: #fff6f3; border-color: #f1d9d4; }
+    .feedback strong { display: block; margin-bottom: 4px; color: var(--green-dark); font-size: 14px; }
+    .feedback.wrong strong { color: var(--red); }
+    .feedback p { margin: 0; color: #53635b; font-size: 14px; }
+    .feedback small { display: block; margin-top: 7px; color: #73827b; font-size: 12px; }
+    .question-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 18px; }
+    .progress-copy { color: var(--muted); font-size: 13px; }
+    .progress-copy strong { color: var(--ink); }
+    .button-dark { border: 0; border-radius: 10px; background: var(--ink); color: white; padding: 11px 15px; font-weight: 800; }
+    .button-dark:hover { background: var(--green-dark); }
+    .button-dark:disabled { cursor: not-allowed; opacity: .42; }
+    .button-light { border: 1px solid var(--line); border-radius: 10px; background: white; color: var(--ink-soft); padding: 10px 13px; font-weight: 750; }
+    .button-light:hover { border-color: #a6c4af; color: var(--green); }
+    .question-empty { text-align: center; padding: 46px 22px; color: var(--muted); }
+    .question-empty strong { display: block; margin-bottom: 4px; color: var(--ink); font-size: 18px; }
+    .side-stack { display: grid; gap: 14px; }
+    .side-card { padding: 19px; }
+    .side-card h3 { font-size: 15px; margin: 0 0 12px; }
+    .side-card p { color: var(--muted); font-size: 13px; margin: 0; }
+    .quiz-feature { background: var(--green-dark); color: white; border-radius: 18px; overflow: hidden; position: relative; }
+    .quiz-feature:after { content: ""; position: absolute; width: 150px; height: 150px; right: -70px; bottom: -80px; border: 1px solid rgba(216,244,106,.28); border-radius: 50%; box-shadow: 0 0 0 22px rgba(216,244,106,.05); }
+    .quiz-feature .side-card { position: relative; z-index: 1; }
+    .quiz-feature h3 { font-size: 17px; }
+    .quiz-feature p { color: #c5d7cd; }
+    .quiz-badge { display: inline-block; color: var(--lime); font-size: 11px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 7px; }
+    .quiz-button { margin-top: 17px; width: 100%; border: 0; border-radius: 10px; padding: 11px 13px; background: var(--lime); color: var(--ink); font-weight: 850; }
+    .quiz-button:hover { background: var(--lime-dark); }
+    .mini-progress { display: flex; gap: 4px; margin: 15px 0 0; }
+    .mini-progress span { height: 5px; flex: 1; background: #f0bf55; border-radius: 9px; }
+    .mini-progress span:nth-child(2) { background: #cbd869; }
+    .mini-progress span:nth-child(3) { background: #8fca8b; }
+    .mini-progress span:nth-child(4) { background: #b4e0aa; }
+    .saved-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 13px; }
+    .saved-stat { background: #f4f7f4; border: 1px solid #e8eee9; border-radius: 11px; padding: 11px; }
+    .saved-stat strong { display: block; color: var(--green); font-size: 21px; line-height: 1.1; }
+    .saved-stat span { color: var(--muted); font-size: 12px; }
+    .topics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .topic-card { background: white; border: 1px solid var(--line); border-radius: 15px; padding: 18px; }
+    .topic-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 12px; color: var(--green); background: #edf5ee; margin-bottom: 13px; }
+    .topic-icon svg { width: 19px; height: 19px; }
+    .topic-card h3 { margin: 0 0 6px; font-size: 15px; }
+    .topic-card p { color: var(--muted); margin: 0; font-size: 13px; }
+    .source-list { display: grid; gap: 10px; }
+    .source-item { display: grid; grid-template-columns: 32px 1fr auto; gap: 12px; align-items: start; border: 1px solid var(--line); background: white; border-radius: 14px; padding: 15px 16px; text-decoration: none; }
+    .source-item:hover { border-color: #9ebda9; box-shadow: 0 6px 20px rgba(17,42,33,.06); }
+    .source-icon { width: 30px; height: 30px; display: grid; place-items: center; color: var(--green-dark); background: #eaf3ea; border-radius: 9px; font-size: 13px; font-weight: 900; }
+    .source-item h3 { margin: 0; font-size: 14px; }
+    .source-item p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+    .source-type { color: #6d7c75; background: #f1f4f1; padding: 5px 8px; border-radius: 99px; font-size: 11px; font-weight: 800; white-space: nowrap; }
+    .source-type.official { color: var(--green-dark); background: #e8f3eb; }
+    .source-note { margin-top: 14px; border-left: 3px solid var(--amber); padding: 11px 14px; background: #fbf7eb; color: #6a5b39; font-size: 13px; }
+    .source-note strong { color: #58420e; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .about-card { padding: 21px; }
+    .about-card h3 { margin: 0 0 8px; font-size: 16px; }
+    .about-card p { margin: 0; color: var(--muted); font-size: 14px; }
+    .about-card .note-tag { display: inline-flex; margin-top: 14px; padding: 5px 9px; border-radius: 999px; color: #476216; background: #f2f7de; font-size: 12px; font-weight: 800; }
+    footer { background: var(--ink); color: #bac8c0; padding: 27px 0; font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+    .footer-inner strong { color: white; }
+    .footer-inner a { color: var(--lime); text-decoration: none; }
+    .toast { position: fixed; bottom: 22px; left: 50%; transform: translate(-50%, 15px); opacity: 0; pointer-events: none; background: var(--ink); color: white; border-radius: 999px; padding: 10px 16px; font-size: 14px; box-shadow: var(--shadow); transition: opacity .2s, transform .2s; z-index: 10; }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @media (max-width: 900px) {
+      .hero { gap: 28px; grid-template-columns: 1fr .82fr; }
+      .practice-layout { grid-template-columns: 1fr; }
+      .side-stack { grid-template-columns: 1fr 1fr; }
+      .topics-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .shell { width: min(100% - 28px, 1180px); }
+      .site-header { height: 66px; }
+      .nav-links { gap: 14px; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      .nav-cta { padding: 10px 12px; font-size: 13px; }
+      .hero { grid-template-columns: 1fr; padding: 46px 0 32px; min-height: unset; }
+      .hero-copy { font-size: 16px; }
+      .outline-card { max-width: 480px; }
+      .stats-row { grid-template-columns: 1fr 1fr; gap: 9px; padding-top: 15px; }
+      .stat-card { padding: 14px; }
+      .stat-card strong { font-size: 20px; }
+      .section { padding-top: 38px; }
+      .section-heading { align-items: start; flex-direction: column; gap: 12px; }
+      .outline-grid, .about-grid { grid-template-columns: 1fr; }
+      .exam-parts { grid-template-columns: 1fr 1fr; }
+      .practice-section { padding-top: 44px; }
+      .practice-top, .question-area { padding-left: 15px; padding-right: 15px; }
+      .practice-tools { align-items: stretch; flex-direction: column; }
+      .search-wrap { width: 100%; }
+      .side-stack { grid-template-columns: 1fr 1fr; }
+      .weight-row { grid-template-columns: 112px 1fr 38px; }
+    }
+    @media (max-width: 460px) {
+      .brand-name { font-size: 16px; }
+      .brand-caption { font-size: 11px; }
+      .hero h1 { font-size: 39px; }
+      .hero-actions { align-items: stretch; }
+      .hero-actions > * { flex: 1; }
+      .exam-parts, .topics-grid, .side-stack { grid-template-columns: 1fr; }
+      .source-item { grid-template-columns: 30px 1fr; }
+      .source-type { grid-column: 2; justify-self: start; }
+      .question-footer { align-items: stretch; flex-direction: column; }
+      .question-footer .button-dark { width: 100%; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *:before, *:after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="shell site-header">
+    <a class="brand" href="#top" aria-label="低压上岸首页">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M13.4 2.5 5.8 13h5.1l-.5 8.5L18.2 10h-5.3l.5-7.5Z" fill="currentColor"/></svg>
+      </span>
+      <span><span class="brand-name">低压上岸</span><span class="brand-caption">低压电工作业 · 初训备考</span></span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#outline">新大纲</a>
+      <a href="#topics">复习范围</a>
+      <a href="#sources">题库来源</a>
+      <a class="nav-cta" href="#practice">开始练习</a>
+    </nav>
+  </header>
+
+  <section class="hero-wrap" id="top">
+    <div class="shell hero">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-dot"></span>2025 新大纲 · 初次取证</div>
+        <h1>把安全要点<br><span>练成肌肉记忆。</span></h1>
+        <p class="hero-copy">按低压电工作业初训新大纲整理的备考参考：先看考核结构，再按主题练习。每道练习题都附答案和思路，错题与收藏保存在本机浏览器。</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="#practice">进入题库练习</a>
+          <a class="button-ghost" href="#outline">先看考试大纲</a>
+        </div>
+        <div class="hero-note">练习题为独立编写参考题，不是官方原题，也不代表正式组卷。</div>
+      </div>
+      <aside class="outline-card" aria-label="初训学时概览">
+        <div class="outline-card-head">
+          <div><h2>初次取证培训</h2><p class="caption">按应急管理部 2025 年大纲</p></div>
+          <span class="outline-tag">新大纲</span>
+        </div>
+        <div class="hours-total"><strong>80</strong><span>学时起</span></div>
+        <div class="hours-bar" aria-label="理论不少于32学时，实操不少于48学时">
+          <span class="hours-theory"></span><span class="hours-practice"></span>
+        </div>
+        <div class="hours-legend">
+          <div><span class="legend-dot"></span>理论 ≥ 32 学时</div>
+          <div><span class="legend-dot practice"></span>实操 ≥ 48 学时</div>
+        </div>
+        <div class="hero-rule"><strong>理论 + 实操</strong> 两项考核分别达到 80 分及以上</div>
+      </aside>
+    </div>
+  </section>
+
+  <div class="shell">
+    <div class="stats-row" aria-label="考核速览">
+      <div class="stat-card"><strong>80 学时</strong><span>初训培训时间不少于此数</span></div>
+      <div class="stat-card"><strong>32 / 48</strong><span>理论与实际操作最低学时</span></div>
+      <div class="stat-card"><strong>80 分</strong><span>理论和实操各自合格线</span></div>
+      <div class="stat-card"><strong>4 科</strong><span>实操考核四个科目</span></div>
+    </div>
+  </div>
+
+  <main class="shell">
+    <section class="section" id="outline">
+      <div class="section-heading">
+        <div><span class="section-kicker">Exam map</span><h2 class="section-title">先搞清楚考什么</h2></div>
+        <p class="section-intro">初训包括安全技术理论与实际操作两部分。实操除了接线，也考安全用具、现场隐患判断和应急处置。</p>
+      </div>
+      <div class="outline-grid">
+        <article class="panel panel-pad">
+          <h3>实操考核：每科抽 1 题</h3>
+          <div class="exam-parts">
+            <div class="exam-part"><span class="part-number">01</span><strong>安全用具使用</strong><p>仪器仪表、安全工器具辨识与使用</p></div>
+            <div class="exam-part"><span class="part-number">02</span><strong>现场隐患排除</strong><p>识别并排除作业现场安全风险</p></div>
+            <div class="exam-part"><span class="part-number">03</span><strong>安全操作技术</strong><p>电动机控制、仪表接线、导线连接等</p></div>
+            <div class="exam-part"><span class="part-number">04</span><strong>现场应急处置</strong><p>触电急救、心肺复苏、灭火器使用</p></div>
+          </div>
+        </article>
+        <article class="panel panel-pad">
+          <h3>实操分值权重</h3>
+          <div class="weight-bars" aria-label="科目权重">
+            <div class="weight-row"><span>安全用具使用</span><div class="weight-track"><div class="weight-fill" style="width:20%"></div></div><strong>20%</strong></div>
+            <div class="weight-row"><span>现场隐患排除</span><div class="weight-track"><div class="weight-fill" style="width:20%"></div></div><strong>20%</strong></div>
+            <div class="weight-row"><span>安全操作技术</span><div class="weight-track"><div class="weight-fill" style="width:40%"></div></div><strong>40%</strong></div>
+            <div class="weight-row"><span>现场应急处置</span><div class="weight-track"><div class="weight-fill" style="width:20%"></div></div><strong>20%</strong></div>
+          </div>
+          <div class="study-callout"><strong>留意否决项：</strong>实操考核设有否决项时，未通过该项则实操不合格。</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section practice-section" id="practice">
+      <div class="section-heading">
+        <div><span class="section-kicker">Practice bank</span><h2 class="section-title">开始刷题</h2></div>
+        <p class="section-intro">按主题筛题、搜索考点，或做一套随机自测。答题记录只保存在当前浏览器。</p>
+      </div>
+      <div class="practice-layout">
+        <section class="panel practice-main" aria-label="题库练习">
+          <div class="practice-top">
+            <div class="practice-tools">
+              <h3 id="practice-title">题库练习</h3>
+              <label class="search-wrap">
+                <span class="sr-only">搜索题目或考点</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+                <input id="search-input" type="search" placeholder="搜索题目或考点" autocomplete="off">
+              </label>
+            </div>
+            <div class="filter-row" id="filters" aria-label="题目筛选"></div>
+          </div>
+          <div id="question-view" class="question-area" aria-live="polite"></div>
+        </section>
+
+        <aside class="side-stack" aria-label="练习工具">
+          <div class="quiz-feature">
+            <div class="side-card">
+              <span class="quiz-badge">Quick check</span>
+              <h3>来一组随机小测</h3>
+              <p>从当前题库中随机抽 20 道，逐题查看答案与解析。它是复习练习，不是官方模拟卷。</p>
+              <button class="quiz-button" id="start-quiz">开始 20 题自测</button>
+              <div class="mini-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+            </div>
+          </div>
+          <div class="panel side-card">
+            <h3>你的复习夹</h3>
+            <p>收藏重点，错题可以单独回看。记录仅存于此设备的浏览器。</p>
+            <div class="saved-stats">
+              <div class="saved-stat"><strong id="favorite-count">0</strong><span>已收藏</span></div>
+              <div class="saved-stat"><strong id="wrong-count">0</strong><span>待复习错题</span></div>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:13px;flex-wrap:wrap">
+              <button class="button-light" id="show-favorites">看收藏</button>
+              <button class="button-light" id="show-wrongs">看错题</button>
+            </div>
+          </div>
+          <div class="panel side-card">
+            <h3>一道题怎么学</h3>
+            <p>先选答案，再读解析。遇到不会的题先标记，最后按主题回顾大纲和实操训练内容。</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="topics">
+      <div class="section-heading">
+        <div><span class="section-kicker">Study checklist</span><h2 class="section-title">新大纲复习范围</h2></div>
+        <p class="section-intro">新大纲把初训理论分为安全生产基础知识和安全生产专业技术，并强调现场安全技能。</p>
+      </div>
+      <div class="topics-grid">
+        <article class="topic-card"><span class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4.5 6v5.2c0 4.7 3.1 7.9 7.5 9.8 4.4-1.9 7.5-5.1 7.5-9.8V6L12 3Z"/><path d="m8.8 12 2.1 2.1 4.4-4.5"/></svg></span><h3>安全生产基础知识</h3><p>安全生产法规、电工基础、风险辨识、隐患排查与电气安全管理。</p></article>
+        <article class="topic-card"><span class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5m0 14h16M7 15l3-4 3 2 5-7"/><circle cx="18" cy="6" r="1"/></svg></span><h3>仪表、工具与测量</h3><p>万用表、钳形电流表、兆欧表、电能表及移动电气设备的安全使用。</p></article>
+        <article class="topic-card"><span class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h2m2 0h2m-6 4h2m2 0h2"/></svg></span><h3>低压电器与保护</h3><p>断路器、接触器、熔断器、热继电器和剩余电流保护装置。</p></article>
+        <article class="topic-card"><span class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5v5m8.5 3.5h-5m-3.5 8.5v-5M3.5 12h5"/></svg></span><h3>电动机与电气线路</h3><p>异步电动机启停、线路保护、导线连接、照明和低压配电柜。</p></article>
+        <article class="topic-card"><span class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M7 4v6m10-6v6M5 10h14v10H5z"/><path d="m8 15 2.2 2.2L16 12"/></svg></span><h3>临时用电与作业现场</h3><p>TN-S 系统、现场布置、作业风险控制、有限空间与高处作业要求。</p></article>
+        <article class="topic-card"><span class="topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v9m0 0 4-4m-4 4L8 8"/><path d="M5 14v5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-5"/><path d="M3 12h3m12 0h3"/></svg></span><h3>现场应急处置</h3><p>触电现场救援、心肺复苏训练、灭火器选择，以及应急疏散。</p></article>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <div class="section-heading">
+        <div><span class="section-kicker">Sources & further practice</span><h2 class="section-title">公开资料与外部题库</h2></div>
+        <p class="section-intro">先以官方大纲为准，再把公开题库当作补充练习。网络题集版本、题量和答案可能不同。</p>
+      </div>
+      <div class="source-list">
+        <a class="source-item" href="https://www.mem.gov.cn/gk/zfxxgkpt/fdzdgknr/202507/W020250718424673091125.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">部</span><span><h3>低压电工作业人员安全技术培训大纲和考核标准（PDF）</h3><p>应急管理部 · 应急〔2025〕59号附件 · 大纲、初训内容、学时安排与考核标准</p></span><span class="source-type official">官方原文</span>
+        </a>
+        <a class="source-item" href="https://www.mem.gov.cn/gk/zcjd/202507/t20250718_551134.shtml" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">部</span><span><h3>应急管理部关于新大纲修订内容的答记者问</h3><p>说明理论和实操科目的调整，以及后续修订理论题库、编制实操题库的安排。</p></span><span class="source-type official">官方解读</span>
+        </a>
+        <a class="source-item" href="https://dgsafety.dg.gov.cn/zfxxgkml/qt/tzgg/content/post_4501630.html" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">政</span><span><h3>特种作业培训考核常见问题答疑</h3><p>东莞市应急管理局 · 含理论考试时长、合格线、统一组卷等说明；具体以报考地公告为准。</p></span><span class="source-type official">政府资料</span>
+        </a>
+        <a class="source-item" href="https://www.weihai.gov.cn/jact/front/mailpubdetail.do?sysid=181&amp;transactId=453375" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">政</span><span><h3>威海市应急局关于低压电工题库的公开答复</h3><p>答复说明统一考试题库不对外发布，培训机构整理的题库仅作学习辅助；此答复发布于 2024 年。</p></span><span class="source-type official">政府答复</span>
+        </a>
+        <a class="source-item" href="https://www.shititong.cn/cha-kan/tikuheji/CBE13375A5800001B5891CB017F01DED.html" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">题</span><span><h3>试题通 ·「低压电工作业新标」</h3><p>平台页面标注 1,272 题，更新时间 2026-11-05，作者未知；题目由平台用户上传。</p></span><span class="source-type">民间题集</span>
+        </a>
+        <a class="source-item" href="https://www.shititong.cn/cha-kan/tikuheji/CBE0282915B000015112119583F914CF.html" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">题</span><span><h3>试题通 ·「低压电工作业人员安全技术理论考核题库（初训）」</h3><p>平台页面标注 646 题，更新时间 2026-11-02，作者未知；先核对题目是否符合新大纲。</p></span><span class="source-type">民间题集</span>
+        </a>
+        <a class="source-item" href="https://www.shititong.cn/652914" target="_blank" rel="noopener noreferrer">
+          <span class="source-icon">题</span><span><h3>试题通 ·「低压电工 2025 新题库原题」</h3><p>平台页面标注 1,241 题，更新时间 2026-03-11，作者未知；页面说明公开题库由用户上传。</p></span><span class="source-type">民间题集</span>
+        </a>
+      </div>
+      <div class="source-note"><strong>题量不等于官方题库题量。</strong>上方数字是第三方平台页面的标注；不同题集题数不一致，也不表示题目已获官方确认。官方大纲的答记者问提到将按新大纲修订理论考试题库并编制实操题库。</div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading">
+        <div><span class="section-kicker">How to use</span><h2 class="section-title">这份参考怎么用</h2></div>
+      </div>
+      <div class="about-grid">
+        <article class="panel about-card"><h3>练习题是独立编写的</h3><p>题目按 2025 年新大纲的知识范围编写，用于理解考点和复习安全原则。它不是官方公布的考试题库，也不承诺覆盖正式试题。</p><span class="note-tag">以培训机构和考试点教学为准</span></article>
+        <article class="panel about-card"><h3>电工作业先确保现场安全</h3><p>本页面是学习辅助。实际作业必须遵守现场制度、设备说明和培训要求；出现触电、火灾或疑似带电风险时，优先确保救援者安全并按应急预案处理。</p><span class="note-tag">不能替代实操培训与现场规程</span></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div><strong>低压上岸</strong> · 低压电工作业初训备考参考</div>
+      <div>依据应急管理部 2025 年新大纲整理 · <a href="#sources">查看来源</a></div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const questions = [
+      {id:1, category:"大纲与考核", topic:"初训学时", text:"按 2025 年新大纲，低压电工作业人员初次取证培训总学时至少为多少？", options:["40 学时","60 学时","80 学时","120 学时"], answer:2, explanation:"初次培训不少于 80 学时，其中理论培训不少于 32 学时、实际操作培训不少于 48 学时。", ref:"新大纲 4.4"},
+      {id:2, category:"大纲与考核", topic:"理论与实操学时", text:"初训的理论培训和实际操作培训最低学时要求分别是什么？", options:["理论 24、实操 56 学时","理论 32、实操 48 学时","理论 40、实操 40 学时","理论 48、实操 32 学时"], answer:1, explanation:"大纲规定理论不少于 32 学时、实际操作不少于 48 学时；具体培训安排由培训机构按要求制定。", ref:"新大纲 4.4"},
+      {id:3, category:"大纲与考核", topic:"考试组成", text:"低压电工作业初次取证考核包括哪两部分？", options:["理论考核和实际操作考核","笔试和面试","理论考核和体能测试","设备检查和口头答辩"], answer:0, explanation:"初次取证分为安全技术理论考核和安全技术实际操作考核两部分。", ref:"新大纲 5.1.1"},
+      {id:4, category:"大纲与考核", topic:"合格线", text:"按新大纲，理论考核与实操考核的合格分数线分别是多少？", options:["均为 60 分","理论 70 分、实操 80 分","均为 80 分","理论 80 分、实操 90 分"], answer:2, explanation:"理论和实际操作均采用百分制，成绩 80 分及以上为合格；实操如设有否决项，否决项未通过则实操不合格。", ref:"新大纲 5.1.3.1"},
+      {id:5, category:"大纲与考核", topic:"实操科目", text:"新大纲低压电工作业实操考核的四个科目中，哪一项权重为 40%？", options:["安全用具使用","作业现场安全隐患排除","安全操作技术","作业现场应急处置"], answer:2, explanation:"四科权重依次为 20%、20%、40%、20%；安全操作技术占 40%。", ref:"新大纲 5.1.3.2"},
+      {id:6, category:"大纲与考核", topic:"实操否决项", text:"如果实操考核设有否决项，考生未通过该项，考核结果如何？", options:["仍可凭总分合格","实操考核不合格","只扣该项分数","由考生自行选择补做"], answer:1, explanation:"新大纲明确：实操考核设置否决项的，否决项未通过，则实操考核不合格。", ref:"新大纲 5.1.3.1"},
+      {id:7, category:"大纲与考核", topic:"理论内容结构", text:"新大纲初训理论考核要点按哪两类内容组织？", options:["机械基础与电工实操","安全生产基础知识与安全生产专业技术","法律法规与英语","电机维修与高压运行"], answer:1, explanation:"新大纲把初次理论培训考核框架完善为安全生产基础知识、安全生产专业技术两类。", ref:"新大纲 5.2；应急管理部答记者问"},
+      {id:8, category:"安全作业", topic:"检修前安全措施", text:"准备检修一台低压设备时，以下哪种做法最符合安全作业原则？", options:["先拆开外壳，再判断是否带电","确认电源并按程序隔离，防止误送电，再验明无电","只按下停止按钮后立即作业","让同事守在开关旁即可开始作业"], answer:1, explanation:"作业前应按现场制度落实停电、隔离、防止误送电和验明无电等措施。停止按钮不等于可靠隔离，具体步骤以培训和现场规程为准。", ref:"新大纲 5.2.1.4；作业安全常识"},
+      {id:9, category:"安全作业", topic:"发现异常", text:"设备运行中出现焦糊味和异常发热，正确的处置是？", options:["继续运行，观察一段时间","用手触摸外壳确定温度","在确保安全的前提下停止设备、隔离风险并报告","向设备泼水降温"], answer:2, explanation:"异常气味和发热可能提示过载、接触不良或绝缘故障。不要带故障继续运行，也不要用水处理电气设备。", ref:"新大纲 4.2.2.3、4.2.2.10"},
+      {id:10, category:"安全作业", topic:"作业现场风险", text:"作业前发现电缆外皮破损且导体可能外露，最稳妥的做法是？", options:["用胶带简单缠一下继续使用","避开破损位置后继续作业","停止使用并隔离风险，按程序修复或更换后再检查","用手套抓住破损处移动电缆"], answer:2, explanation:"破损绝缘可能造成触电或短路风险。应停止使用、控制现场风险，并由符合要求的人员按程序处理和复检。", ref:"新大纲 4.2.2.3、4.2.2.6"},
+      {id:11, category:"安全作业", topic:"保护接地", text:"保护接地（保护导体连接）的主要安全作用是什么？", options:["为用电设备提供工作电流回路","降低设备外露可导电部分故障时的触电风险","替代所有过电流保护","让电动机转速更稳定"], answer:1, explanation:"保护接地属于防触电措施之一，用于降低外露可导电部分发生故障时的危险。它不能替代其他必要的保护措施。", ref:"新大纲 5.2.1.4"},
+      {id:12, category:"安全作业", topic:"剩余电流保护", text:"剩余电流动作保护装置的正确理解是？", options:["可以替代保护接地和全部过流保护","用于检测剩余电流并按装置特性动作，仍须配合其他安全措施","只用于测量线路电压","可以保证任何触电事故都不会发生"], answer:1, explanation:"新大纲要求掌握剩余电流保护装置类型、原理和特性参数。它是电气安全措施的一部分，不能据此省略接地、绝缘、隔离或安全操作要求。", ref:"新大纲 5.2.1.4、5.2.2.4"},
+      {id:13, category:"安全作业", topic:"高处作业", text:"进行需要登高的电工作业时，安全防护的正确做法是？", options:["只要时间短就不必使用防坠落用具","按作业要求正确使用合格的登高防护用具并做好防坠落措施","把工具放在梯子顶端，腾出双手","站在带轮且未固定的椅子上操作"], answer:1, explanation:"新大纲包含登高安全用具及使用方法。现场应按作业风险和制度选用合格防护用具并可靠使用。", ref:"新大纲 5.2.2.1"},
+      {id:14, category:"安全作业", topic:"有限空间", text:"在有限空间开展电工作业前，最重要的是？", options:["只要佩戴手套即可进入","按规定进行风险辨识和作业审批，落实通风、检测、监护及应急准备","先进入空间后再判断是否需要通风","由一人独自作业以减少沟通"], answer:1, explanation:"新大纲将有限空间电工作业安全要求列入初训内容。具体检测、监护和作业程序应遵守适用规定与现场方案。", ref:"新大纲 5.2.1.4"},
+      {id:15, category:"安全作业", topic:"作业前检查", text:"作业前发现现场防护罩缺失，设备有运动部件且可能伤人，应如何处理？", options:["先快速完成操作","提醒旁人后照常作业","停止相关作业，控制风险并按制度处理隐患","只要戴绝缘手套就可以继续"], answer:2, explanation:"现场隐患排查要求识别风险并排除隐患。存在可能导致伤害的防护缺失时，应先控制风险，不应带险作业。", ref:"新大纲 4.2.3.2"},
+      {id:16, category:"仪表与测量", topic:"电压表", text:"使用普通电压表测量电路两点间电压时，电压表应怎样接入？", options:["与被测部分并联","与被测部分串联","与保护导体串联","短接在被测电源两端"], answer:0, explanation:"电压表测量两点间电位差，应并联在被测部分两端；使用前还须确认仪表、量程和测量环境适用。", ref:"新大纲 5.2.2.2"},
+      {id:17, category:"仪表与测量", topic:"电流表", text:"使用普通电流表测量支路电流时，电流表通常怎样接入？", options:["与被测支路串联","与被测支路并联","并接在电源两端","跨接在保护接地线上"], answer:0, explanation:"普通电流表应串入被测支路，接错可能造成短路或损坏仪表。具体仪表按说明书和培训要求使用。", ref:"新大纲 5.2.2.2"},
+      {id:18, category:"仪表与测量", topic:"钳形电流表", text:"用钳形电流表测量单相负载电流时，通常应钳住什么？", options:["整根多芯电缆的所有导体","其中一根载流导体","保护接地线和零线一起","设备金属外壳"], answer:1, explanation:"钳住单根载流导体可测得该导体电流；同时钳住去回电流导体时，磁场会相互抵消，读数可能不正确。", ref:"新大纲 5.2.2.2"},
+      {id:19, category:"仪表与测量", topic:"电阻测量", text:"使用万用表电阻档测量元件电阻前，首先要做什么？", options:["保持线路带电以便读数稳定","确认被测电路断电，并按程序释放储能","把表笔插入电流插孔","把电阻档并接在电源两端"], answer:1, explanation:"电阻档不得用于带电测量。先断电并确认安全；有电容等储能元件时，按规定处理后再测量。", ref:"新大纲 5.2.2.2"},
+      {id:20, category:"仪表与测量", topic:"兆欧表", text:"兆欧表主要用于测量什么？", options:["线路绝缘电阻","电能消耗量","工作频率","电动机转速"], answer:0, explanation:"兆欧表用于测量绝缘电阻。测量前应按规定停电并处理被测回路，避免对人员、设备或仪表造成危险。", ref:"新大纲 5.2.2.2"},
+      {id:21, category:"仪表与测量", topic:"万用表使用", text:"不确定被测电压大致范围时，使用万用表的正确思路是？", options:["从最低量程开始，快速逐档试测","选用符合仪表额定值的电压档，按安全方法从较高适当量程开始确认","直接使用电阻档","任意插孔都可以测电压"], answer:1, explanation:"测量前检查仪表额定类别、表笔插孔和档位。未知电压时按仪表说明书采用合适的较高量程确认，避免超量程或接错档位。", ref:"新大纲 5.2.2.2"},
+      {id:22, category:"仪表与测量", topic:"仪表安全", text:"准备使用电工仪表时，发现表笔绝缘破损，正确做法是？", options:["缠一圈胶带后马上使用","只要手不碰到金属部分就可以","停止使用并更换合格表笔，再检查仪表","把破损表笔接到接地线上"], answer:2, explanation:"表笔绝缘破损会增加触电和短路风险。应停用不合格工具，换用符合要求的表笔并检查仪表状态。", ref:"新大纲 5.2.2.2"},
+      {id:23, category:"电气设备", topic:"热继电器", text:"低压电动机回路中的热继电器主要用于什么保护？", options:["过载保护","照明调光","电能计量","替代隔离开关"], answer:0, explanation:"热继电器主要用于电动机过载保护。短路保护等功能应由相应保护电器承担，按设计正确配合。", ref:"新大纲 5.2.2.4"},
+      {id:24, category:"电气设备", topic:"熔断器", text:"熔断器的主要作用通常是？", options:["线路发生过电流时熔断并切断电路","提供电能计量","保持接触器线圈持续吸合","检测线路绝缘电阻"], answer:0, explanation:"熔断器通过熔体在过电流达到相应条件时熔断，实现保护。选用和更换须符合回路要求，不可随意加大规格。", ref:"新大纲 5.2.2.4"},
+      {id:25, category:"电气设备", topic:"隔离开关", text:"隔离开关（刀闸）的核心用途是？", options:["提供可见或可靠的隔离断口，按设备要求用于隔离","代替所有断路器进行故障分断","调节电动机转速","测量剩余电流"], answer:0, explanation:"隔离开关主要用于隔离电源或回路。是否具备负荷分断能力要看具体设备设计，不能把普通隔离开关当作负荷开关使用。", ref:"新大纲 4.2.2.4、5.2.2.4"},
+      {id:26, category:"电气设备", topic:"接触器自锁", text:"常见电动机控制回路中，接触器辅助常开触点常用于什么功能？", options:["形成自锁回路，使启动按钮松开后线圈仍能保持吸合","替代热继电器检测温度","测量电机绝缘电阻","切断保护接地线"], answer:0, explanation:"辅助常开触点可与启动按钮配合形成自锁回路。接线与调试应在安全条件下按电路图和实操要求进行。", ref:"新大纲 4.2.3.3"},
+      {id:27, category:"电气设备", topic:"电动机正反转", text:"三相异步电动机正反转控制回路设置电气或机械互锁，主要是为了什么？", options:["防止正、反转接触器同时吸合造成相间短路","提高电能表计量精度","替代电动机过载保护","减少电动机的绝缘等级"], answer:0, explanation:"正反转接触器若同时闭合可能造成严重短路故障。互锁用于防止两者同时吸合，仍需按图纸正确接线和检查。", ref:"新大纲 4.2.3.3"},
+      {id:28, category:"电气设备", topic:"电力电容器", text:"对电力电容器进行检修或接触其端子前，正确做法是？", options:["只断开照明开关后立即触碰","按规程隔离电源，并确认残余电荷已安全释放","先短接任意两根导线","用手背快速碰一下判断是否带电"], answer:1, explanation:"电容器可能在断电后仍储存电荷。必须按设备和作业规程隔离、放电并确认安全，不能用身体试探。", ref:"新大纲 4.2.2.8"},
+      {id:29, category:"临时用电与应急", topic:"TN-S 系统", text:"TN-S 临时用电系统的主要特点是什么？", options:["N 线与 PE 线在系统中始终合并","N 线与 PE 线分开敷设","不需要保护导体","只适用于直流照明"], answer:1, explanation:"TN-S 系统中中性导体 N 与保护导体 PE 分开设置。临时用电系统应按方案和适用要求配置。", ref:"新大纲 4.2.2.9"},
+      {id:30, category:"临时用电与应急", topic:"移动电气设备", text:"使用手持式电动工具前，发现电源线破损或插头松动，应如何处理？", options:["继续使用但缩短作业时间","停用并按程序更换或维修，确认合格后再用","把电源线绕在手上固定","放在潮湿处测试是否漏电"], answer:1, explanation:"手持式和移动电气设备使用前应检查状态。发现缺陷应停用并处理，不可带故障投入使用。", ref:"新大纲 4.2.2.3"},
+      {id:31, category:"临时用电与应急", topic:"触电现场", text:"发现有人疑似触电，救援者首先应做什么？", options:["立即用手把伤者拉开","先确保自身安全，按现场条件切断电源或使伤者脱离电源","向伤者泼水","先移动伤者到室外再处理"], answer:1, explanation:"先控制电源和救援者自身风险，避免形成第二名触电者。需要时呼叫急救和现场应急力量，具体救援按训练与预案进行。", ref:"新大纲 4.2.3.4、5.2.1.4"},
+      {id:32, category:"临时用电与应急", topic:"触电脱离电源", text:"现场无法立即切断电源时，以下哪种救援原则更安全？", options:["徒手拉住伤者衣领","站在积水中拉拽伤者","在确保自身安全的前提下，使用适用的绝缘救援工具并呼叫支援","用金属杆挑开电线"], answer:2, explanation:"不要直接接触伤者或带电部分。只有在具备条件并确保自身安全时，才可使用适用的绝缘工具协助脱离，同时尽快呼叫支援。", ref:"新大纲 4.2.3.4"},
+      {id:33, category:"临时用电与应急", topic:"触电后续处置", text:"伤者脱离电源后，以下哪项处置正确？", options:["认为已脱离电源就无需再处理","呼叫急救，根据伤者状况和自身训练实施心肺复苏或使用 AED","喂水并让伤者独自休息","先拍摄现场视频再决定是否求助"], answer:1, explanation:"应尽快呼叫急救并评估伤者。心肺复苏和 AED 应按受训方法及现场急救指引实施，不要因外观暂时好转而延误救治。", ref:"新大纲 4.2.3.4"},
+      {id:34, category:"临时用电与应急", topic:"电气火灾", text:"电气设备仍可能带电且出现火情时，以下做法哪项正确？", options:["立即用水冲灭","确保安全时先断电，并使用适用于电气火灾的灭火器材","用湿布覆盖带电设备","打开柜门靠近火源查看"], answer:1, explanation:"带电设备不能用水直接扑救。若能安全操作，应先切断电源，再按消防预案使用适用灭火器材；无法安全处置时应撤离并报警。", ref:"新大纲 4.2.3.4；消防安全常识"},
+      {id:35, category:"临时用电与应急", topic:"作业结束复电", text:"检修结束后准备恢复送电，哪种做法最合适？", options:["不检查现场，直接合闸","按程序确认人员撤离、工具清点、设备状态和送电条件，再按规定恢复供电","让他人先合闸，自己留在柜内检查","只要控制按钮复位即可"], answer:1, explanation:"恢复供电前应按现场制度确认作业结束、人员和工具已撤离、设备状态符合要求，并依程序解除隔离和送电。", ref:"新大纲 4.2.1.4、4.2.3.3"},
+      {id:36, category:"临时用电与应急", topic:"风险辨识", text:"下列哪一项属于低压电工作业现场应优先辨识的风险？", options:["裸露带电部位、破损电缆和可能误送电的电源","墙面颜色是否协调","工具箱标签字体大小","设备铭牌是否便于拍照"], answer:0, explanation:"新大纲要求掌握风险识别、隐患排查和电气事故防范。裸露带电部位、绝缘破损和误送电都可能直接导致触电或电气事故。", ref:"新大纲 5.2.1.3"}
+    ];
+
+    const categories = ["全部题目","大纲与考核","安全作业","仪表与测量","电气设备","临时用电与应急","收藏题","错题回看"];
+    const letter = ["A","B","C","D"];
+    const storageKey = "lv-electrician-prep-v1";
+    let saved = {favorites:[], wrongs:[]};
+    try {
+      const read = JSON.parse(localStorage.getItem(storageKey) || "{}");
+      saved.favorites = Array.isArray(read.favorites) ? read.favorites : [];
+      saved.wrongs = Array.isArray(read.wrongs) ? read.wrongs : [];
+    } catch (e) {}
+    let activeCategory = "全部题目";
+    let searchTerm = "";
+    let activeList = questions.map(function(q){ return q.id; });
+    let currentIndex = 0;
+    let answered = {};
+    let mode = "practice";
+    let toastTimer;
+
+    const filterRoot = document.getElementById("filters");
+    const questionRoot = document.getElementById("question-view");
+    const titleRoot = document.getElementById("practice-title");
+    const searchInput = document.getElementById("search-input");
+    const favoriteCount = document.getElementById("favorite-count");
+    const wrongCount = document.getElementById("wrong-count");
+
+    function persist() {
+      localStorage.setItem(storageKey, JSON.stringify(saved));
+      updateSavedCounts();
+    }
+    function updateSavedCounts() {
+      favoriteCount.textContent = String(saved.favorites.length);
+      wrongCount.textContent = String(saved.wrongs.length);
+    }
+    function showToast(message) {
+      const el = document.getElementById("toast");
+      el.textContent = message;
+      el.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function(){ el.classList.remove("show"); }, 1800);
+    }
+    function getById(id) {
+      return questions.find(function(q){ return q.id === id; });
+    }
+    function filteredQuestions() {
+      const term = searchTerm.trim().toLocaleLowerCase();
+      return questions.filter(function(q) {
+        const categoryMatches = activeCategory === "全部题目" ||
+          q.category === activeCategory ||
+          (activeCategory === "收藏题" && saved.favorites.indexOf(q.id) !== -1) ||
+          (activeCategory === "错题回看" && saved.wrongs.indexOf(q.id) !== -1);
+        const textMatches = !term || (q.text + " " + q.topic + " " + q.category + " " + q.options.join(" ")).toLocaleLowerCase().indexOf(term) !== -1;
+        return categoryMatches && textMatches;
+      });
+    }
+    function renderFilters() {
+      filterRoot.innerHTML = "";
+      categories.forEach(function(cat) {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "filter-chip" + (activeCategory === cat ? " active" : "");
+        button.textContent = cat;
+        button.setAttribute("aria-pressed", activeCategory === cat ? "true" : "false");
+        button.addEventListener("click", function() {
+          activeCategory = cat;
+          mode = "practice";
+          answered = {};
+          currentIndex = 0;
+          activeList = filteredQuestions().map(function(q){ return q.id; });
+          titleRoot.textContent = cat === "全部题目" ? "题库练习" : cat;
+          renderFilters();
+          renderQuestion();
+        });
+        filterRoot.appendChild(button);
+      });
+    }
+    function renderQuestion() {
+      activeList = activeList.filter(function(id){ return !!getById(id); });
+      if (!activeList.length || currentIndex >= activeList.length) {
+        if (mode === "quiz" && activeList.length) {
+          renderQuizResult();
+          return;
+        }
+        questionRoot.innerHTML = '<div class="question-empty"><strong>这里暂时没有题目</strong><span>换一个筛选条件，或清除搜索关键词再试试。</span></div>';
+        return;
+      }
+      const q = getById(activeList[currentIndex]);
+      const selected = answered[q.id];
+      const isFavorite = saved.favorites.indexOf(q.id) !== -1;
+      let html = '<div class="question-meta"><div class="question-tags"><span class="question-count">' + (mode === "quiz" ? "随机自测" : "练习") + ' · ' + (currentIndex + 1) + ' / ' + activeList.length + '</span><span class="question-category">' + q.topic + '</span><span class="question-type">单选题</span></div>';
+      html += '<button type="button" class="icon-button ' + (isFavorite ? "saved" : "") + '" id="favorite-toggle" aria-pressed="' + (isFavorite ? "true" : "false") + '"><svg viewBox="0 0 24 24" fill="' + (isFavorite ? "currentColor" : "none") + '" stroke="currentColor" stroke-width="1.8"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/></svg>' + (isFavorite ? "已收藏" : "收藏") + '</button></div>';
+      html += '<h4 class="question-text">' + q.text + '</h4><div class="options" role="group" aria-label="选择一个答案">';
+      q.options.forEach(function(option, index) {
+        let classes = "option-button";
+        if (selected !== undefined && index === q.answer) classes += " correct";
+        if (selected !== undefined && index === selected && selected !== q.answer) classes += " incorrect";
+        html += '<button type="button" class="' + classes + '" data-answer="' + index + '"' + (selected !== undefined ? " disabled" : "") + '><span class="option-letter">' + letter[index] + '</span><span class="option-copy">' + option + '</span></button>';
+      });
+      html += '</div>';
+      if (selected !== undefined) {
+        const right = selected === q.answer;
+        html += '<div class="feedback ' + (right ? "" : "wrong") + '"><strong>' + (right ? "回答正确" : "再记一下") + ' · 正确答案 ' + letter[q.answer] + '</strong><p>' + q.explanation + '</p><small>考点参考：' + q.ref + '</small></div>';
+      }
+      const completed = Object.keys(answered).length;
+      html += '<div class="question-footer"><span class="progress-copy">本组已答 <strong>' + completed + '</strong> / ' + activeList.length + '</span><div style="display:flex;gap:8px;flex-wrap:wrap">';
+      if (currentIndex > 0) html += '<button class="button-light" id="previous-question" type="button">上一题</button>';
+      if (selected !== undefined) html += '<button class="button-dark" id="next-question" type="button">' + (currentIndex === activeList.length - 1 && mode === "quiz" ? "查看小测结果" : "下一题") + '</button>';
+      if (mode === "quiz") html += '<button class="button-light" id="end-quiz" type="button">提前交卷</button>';
+      html += '</div></div>';
+      questionRoot.innerHTML = html;
+      document.querySelectorAll(".option-button").forEach(function(button) {
+        button.addEventListener("click", function() {
+          const choice = Number(button.dataset.answer);
+          answered[q.id] = choice;
+          if (choice !== q.answer) {
+            if (saved.wrongs.indexOf(q.id) === -1) saved.wrongs.push(q.id);
+          } else {
+            saved.wrongs = saved.wrongs.filter(function(id){ return id !== q.id; });
+          }
+          persist();
+          renderQuestion();
+        });
+      });
+      const favoriteButton = document.getElementById("favorite-toggle");
+      favoriteButton.addEventListener("click", function() {
+        if (saved.favorites.indexOf(q.id) !== -1) saved.favorites = saved.favorites.filter(function(id){ return id !== q.id; });
+        else saved.favorites.push(q.id);
+        persist();
+        renderQuestion();
+        showToast(saved.favorites.indexOf(q.id) !== -1 ? "已加入收藏" : "已取消收藏");
+      });
+      const next = document.getElementById("next-question");
+      if (next) next.addEventListener("click", function() {
+        if (currentIndex < activeList.length - 1) currentIndex += 1;
+        else if (mode === "quiz") { renderQuizResult(); return; }
+        else currentIndex = 0;
+        renderQuestion();
+      });
+      const previous = document.getElementById("previous-question");
+      if (previous) previous.addEventListener("click", function(){ currentIndex -= 1; renderQuestion(); });
+      const end = document.getElementById("end-quiz");
+      if (end) end.addEventListener("click", renderQuizResult);
+    }
+    function renderQuizResult() {
+      const total = Object.keys(answered).length;
+      const correct = Object.keys(answered).filter(function(id){ return answered[id] === getById(Number(id)).answer; }).length;
+      const score = total ? Math.round(correct / activeList.length * 100) : 0;
+      const missed = Object.keys(answered).filter(function(id){ return answered[id] !== getById(Number(id)).answer; }).map(Number);
+      let html = '<div class="question-empty" style="padding:12px 8px 22px"><span class="question-count">随机自测完成</span><h3 style="font-size:30px;line-height:1.2;margin:14px 0 5px;color:var(--ink)">' + score + '<span style="font-size:16px;color:var(--muted)"> 分</span></h3><span>已答 ' + total + ' / ' + activeList.length + ' 题 · 正确 ' + correct + ' 题</span>';
+      html += '<p style="max-width:460px;margin:12px auto 0;color:var(--muted);font-size:13px">这是本页练习成绩，不等同正式考试成绩。正式理论与实操合格要求请以官方大纲和报考地通知为准。</p>';
+      html += '<div style="display:flex;justify-content:center;gap:9px;margin-top:18px;flex-wrap:wrap"><button type="button" class="button-dark" id="retry-quiz">再抽一组</button>';
+      if (missed.length) html += '<button type="button" class="button-light" id="review-missed">复习本组错题 (' + missed.length + ')</button>';
+      html += '</div></div>';
+      if (missed.length) {
+        html += '<div style="border-top:1px solid var(--line);padding-top:16px"><strong style="font-size:14px">本组需要回顾</strong><div style="display:grid;gap:8px;margin-top:9px">';
+        missed.forEach(function(id) { const q = getById(id); html += '<button type="button" class="button-light missed-link" data-id="' + id + '" style="text-align:left">' + q.topic + ' · ' + q.text + '</button>'; });
+        html += '</div></div>';
+      }
+      questionRoot.innerHTML = html;
+      document.getElementById("retry-quiz").addEventListener("click", beginQuiz);
+      const reviewButton = document.getElementById("review-missed");
+      if (reviewButton) reviewButton.addEventListener("click", function() {
+        activeCategory = "错题回看";
+        mode = "practice";
+        answered = {};
+        currentIndex = 0;
+        activeList = filteredQuestions().map(function(q){ return q.id; });
+        titleRoot.textContent = activeCategory;
+        renderFilters();
+        renderQuestion();
+      });
+      document.querySelectorAll(".missed-link").forEach(function(button) {
+        button.addEventListener("click", function() {
+          activeList = [Number(button.dataset.id)];
+          currentIndex = 0;
+          mode = "practice";
+          answered = {};
+          activeCategory = "全部题目";
+          titleRoot.textContent = "题库练习";
+          renderFilters();
+          renderQuestion();
+        });
+      });
+    }
+    function beginQuiz() {
+      const pool = filteredQuestions().slice();
+      for (let i = pool.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        const temp = pool[i]; pool[i] = pool[j]; pool[j] = temp;
+      }
+      if (!pool.length) {
+        showToast("当前筛选下没有可用题目");
+        return;
+      }
+      mode = "quiz";
+      activeList = pool.slice(0, Math.min(20, pool.length)).map(function(q){ return q.id; });
+      currentIndex = 0;
+      answered = {};
+      titleRoot.textContent = "随机小测";
+      renderQuestion();
+      document.getElementById("practice").scrollIntoView({behavior:"smooth", block:"start"});
+    }
+    filterRoot.addEventListener("click", function(event) {
+      if (event.target.classList.contains("filter-chip")) document.getElementById("practice").scrollIntoView({behavior:"smooth", block:"start"});
+    });
+    searchInput.addEventListener("input", function() {
+      searchTerm = searchInput.value;
+      mode = "practice";
+      answered = {};
+      currentIndex = 0;
+      activeList = filteredQuestions().map(function(q){ return q.id; });
+      renderQuestion();
+    });
+    document.getElementById("start-quiz").addEventListener("click", beginQuiz);
+    document.getElementById("show-favorites").addEventListener("click", function() {
+      activeCategory = "收藏题"; mode = "practice"; answered = {}; currentIndex = 0;
+      activeList = filteredQuestions().map(function(q){ return q.id; });
+      titleRoot.textContent = activeCategory; renderFilters(); renderQuestion();
+      document.getElementById("practice").scrollIntoView({behavior:"smooth", block:"start"});
+    });
+    document.getElementById("show-wrongs").addEventListener("click", function() {
+      activeCategory = "错题回看"; mode = "practice"; answered = {}; currentIndex = 0;
+      activeList = filteredQuestions().map(function(q){ return q.id; });
+      titleRoot.textContent = activeCategory; renderFilters(); renderQuestion();
+      document.getElementById("practice").scrollIntoView({behavior:"smooth", block:"start"});
+    });
+    renderFilters();
+    updateSavedCounts();
+    renderQuestion();
+  </script>
+</body>
+</html>
